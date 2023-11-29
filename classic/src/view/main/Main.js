@@ -15,7 +15,7 @@ Ext.define('MyApp.view.main.Main', {
 
         'MyApp.view.main.MainController',
         'MyApp.view.main.MainModel',
-        'MyApp.view.main.List'
+        'MyApp.view.main.List',
     ],
 
     controller: 'main',

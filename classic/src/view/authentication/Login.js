@@ -1,9 +1,9 @@
-Ext.define('MyApp.view.login.Login', {
+Ext.define('MyApp.view.authentication.Login', {
     extend: 'Ext.window.Window',
     xtype: 'login',
 
     requires: [
-        'MyApp.view.login.LoginController',
+        'MyApp.view.authentication.LoginController',
         'Ext.form.Panel'
     ],
 
