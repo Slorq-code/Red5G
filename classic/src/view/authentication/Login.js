@@ -8,7 +8,7 @@ Ext.define('MyApp.view.authentication.Login', {
     ],
 
     controller: 'login',
-    bodyPadding: 10,
+    bodyPadding: 1000,
     title: 'Login Window',
     closable: false,
     autoShow: true,

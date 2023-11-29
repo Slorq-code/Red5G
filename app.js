@@ -14,7 +14,7 @@ Ext.application({
     ],
 
     // The name of the initial view to create.
-    // mainView: 'MyApp.view.authentication.Login',
+    mainView: 'MyApp.view.main.Main',
 
     launch: function() {
         this.showLogin();
@@ -33,9 +33,10 @@ Ext.application({
         win.show();
     },   
     showApp: function(datos) {
-        //debugger;
-        Ext.create('MyApp.view.main.Main',{
-            datos:datos,
-        });
+        // debugger;
+         let hom = Ext.create('MyApp.view.main.Main',{
+             datos:datos,
+         });
+          hom.show();
     }
 });
