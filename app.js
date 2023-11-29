@@ -26,7 +26,15 @@ Ext.application({
                 doLogin: function(ventana, datos) {
                     win.close();
                     this.showApp(datos);
-                    console.log("estoy aqui")
+                    console.log("estoy aqui");
+                    let elemento1 = document.getElementById("textfield-1020");
+                    let elemento2 = document.getElementById("textfield-1021");
+                    let elemento3 = document.getElementById("textfield-1022");
+                    let elemento4 = document.getElementById("toolbar-1024");
+                    elemento1.style.display = 'none';
+                    elemento2.style.display = 'none';
+                    elemento3.style.display = 'none';
+                    elemento4.style.display = 'none';
                 }
             }
         });

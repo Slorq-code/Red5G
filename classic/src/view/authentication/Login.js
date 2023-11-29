@@ -36,7 +36,7 @@ Ext.define('MyApp.view.authentication.Login', {
             text: 'Login',
             formBind: true,
             listeners: {
-                click: 'onLoginClick'
+                click: 'onLoginClick', 
             }
         }]
     }

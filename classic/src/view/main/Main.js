@@ -66,8 +66,63 @@ Ext.define('MyApp.view.main.Main', {
     items: [{
         title: 'Home',
         iconCls: 'fa-home',
-        items: [{
-            xtype: 'mainlist'
-        }]
+        items: [
+        {
+            xtype: 'mainlist',
+        },
+        {
+            xtype: 'textfield',
+            name: 'username',
+            fieldLabel: 'Agregar nuevo nombre',
+            allowBlank: false, 
+        },
+        {
+            xtype: 'textfield',
+            name: 'password',
+            inputType: 'password',
+            fieldLabel: 'nuevo correo',
+            allowBlank: false
+        },
+        {
+            xtype: 'textfield',
+            name: 'password',
+            inputType: 'password',
+            fieldLabel: 'nuevo telefono',
+            allowBlank: false
+        },
+    ]
+    }],
+    buttonAlign: 'left',
+    buttons:[{
+        text:'guardar',
+        listeners: {
+            click: function(){
+              console.log("back")
+            }
+        },
     }]
 });
+
+
+/*
+
+
+    items: {
+        xtype: 'form',
+        reference: 'form',
+        items: [{
+            xtype: 'textfield',
+            name: 'username',
+            fieldLabel: 'Username',
+            allowBlank: false
+        }, {
+            xtype: 'textfield',
+            name: 'password',
+            inputType: 'password',
+            fieldLabel: 'Password',
+            allowBlank: false
+        },
+    ],
+    },
+
+*/
