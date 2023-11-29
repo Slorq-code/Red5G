@@ -8,6 +8,10 @@ Ext.define("MyApp.view.main.Main", {
     "MyApp.store.Personnel",
   ],
 
+  store: {
+    type: "personnel", // Asegúrate de tener esta configuración
+  },
+
   controller: "main",
   viewModel: "main",
 
@@ -102,8 +106,6 @@ Ext.define("MyApp.view.main.Main", {
       text: "guardar",
       listeners: {
         click: function () {
-          var me = this;
-
           let elemento1 = document.getElementById("textfield-1020");
           let elemento2 = document.getElementById("textfield-1021");
           let elemento3 = document.getElementById("textfield-1022");
@@ -123,9 +125,8 @@ Ext.define("MyApp.view.main.Main", {
           let newMail = view.down("#newMailField").getValue();
           let newPhone = view.down("#newPhoneField").getValue();
 
-          // Obtén la tienda (store) de Personnel
-          let store = Ext.getStore('personnel') || Ext.create('MyApp.store.Personnel');
-
+          let store =
+            Ext.getStore("personnel") || Ext.create("MyApp.store.Personnel");
 
           let newPerson = Ext.create("MyApp.model.Personnel", {
             name: newName,
@@ -133,10 +134,11 @@ Ext.define("MyApp.view.main.Main", {
             phone: newPhone,
           });
 
-          // Agrega el nuevo registro a la tienda
           store.add(newPerson);
 
-          // Restablece los valores del formulario
+          var mainList = view.down("mainlist");
+          mainList.getStore().load(); // O mainList.refresh(); dependiendo de la versión de Sencha Ext JS
+
           view.down("#newNameField").setValue("");
           view.down("#newMailField").setValue("");
           view.down("#newPhoneField").setValue("");

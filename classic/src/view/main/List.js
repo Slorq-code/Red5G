@@ -41,6 +41,7 @@ Ext.define('MyApp.view.main.List', {
                 elemento2.style.display = 'block';
                 elemento3.style.display = 'block';
                 elemento4.style.display = 'block';
+
             }
         },
     }]
