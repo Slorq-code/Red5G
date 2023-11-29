@@ -14,17 +14,28 @@ Ext.application({
     ],
 
     // The name of the initial view to create.
-    //mainView: 'MyApp.view.main.Main'
-    
+    // mainView: 'MyApp.view.authentication.Login',
+
     launch: function() {
         this.showLogin();
     },
     showLogin: function() {
-        let win = Ext.create('MyApp.view.authentication.Login');
+        let win = Ext.create('MyApp.view.authentication.Login', {
+            listeners: {
+                scope:this,
+                doLogin: function(ventana, datos) {
+                    win.close();
+                    this.showApp(datos);
+                    console.log("estoy aqui")
+                }
+            }
+        });
         win.show();
     },   
-    showApp: function() {
+    showApp: function(datos) {
         //debugger;
-        Ext.create('MyApp.view.main.Main');
+        Ext.create('MyApp.view.main.Main',{
+            datos:datos,
+        });
     }
 });
