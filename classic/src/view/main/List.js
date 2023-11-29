@@ -9,7 +9,7 @@ Ext.define('MyApp.view.main.List', {
         'MyApp.store.Personnel'
     ],
 
-    title: 'Personnell',
+    title: 'Tabla con informacion, despues de hacer el proceso de agregar mirar la consola',
 
     store: {
         type: 'personnel'
