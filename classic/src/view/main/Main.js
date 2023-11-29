@@ -9,13 +9,17 @@ Ext.define('MyApp.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 
+    launch: function () {
+        console.log('La vista principal se ha lanzado.');
+    },
+
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
         'MyApp.view.main.MainController',
         'MyApp.view.main.MainModel',
-        'MyApp.view.main.List',
+        'MyApp.view.main.List'
     ],
 
     controller: 'main',

@@ -23,4 +23,8 @@ Ext.application({
         let win = Ext.create('MyApp.view.authentication.Login');
         win.show();
     },   
+    showApp: function() {
+        //debugger;
+        Ext.create('MyApp.view.main.Main');
+    }
 });
